@@ -1,0 +1,271 @@
+@import url("http://fonts.cdnfonts.com/css/daydream");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+body {
+	background: #F3F5F9;
+	font-family: 'bellefair', sans-serif !important;
+	background-image: url("bg.png");
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size:cover;
+	overflow: auto;
+}
+
+.h1 {
+	font-size: 35px;
+}
+
+.h2 {
+	font-size: 18px;
+}
+
+#line {
+	width: 70%;
+	margin: 0 auto;
+	border-bottom: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+
+label {
+	font-size: 15px;
+}
+
+.option {
+	color: #838383;
+	font-size: 13px;
+}
+
+input[type=radio]:checked+label {
+	color: black;
+}
+
+#customForm {
+  background-color: rgba(255, 255, 255, 0.825);
+  width: 60%;
+  font-size: 30px;
+  text-align: center;
+  padding: 30px 0;
+  margin: 50px auto;
+  border-radius: 27px;
+  text-transform: uppercase;
+}
+
+#customForm .form {
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+input {
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+input[type=text] {
+	font-family: inherit;
+	width: 100%;
+	margin: 0px 0;
+	display: inline-block;
+	border: none;
+	background-color: #ffffff00;
+	border: 1px solid #C9C9C9;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 15px 10px;
+	margin-top: 10px;
+}
+
+input[type=text]::placeholder {
+	color: #A4A4A4;
+}
+
+input[type=text]:focus {
+	font-family: inherit;
+	width: 100%;
+	margin: 0px 0;
+	display: inline-block;
+	border: none;
+	background-color: #ffffff00;
+	border: 1px solid #C9C9C9;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 15px 10px;
+	outline: none;
+	color: black;
+	margin-top: 10px;
+}
+
+textarea {
+	font-family: inherit;
+	width: 100%;
+	height: 100px;
+	margin: 0px 0;
+	display: inline-block;
+	border: none;
+	background-color: #ffffff00;
+	border: 1px solid #C9C9C9;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 15px 10px;
+	resize: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+textarea::placeholder {
+	color: #A4A4A4;
+}
+
+textarea:focus {
+	font-family: inherit;
+	width: 100%;
+	margin: 0px 0;
+	display: inline-block;
+	border: none;
+	background-color: #ffffff00;
+	border: 1px solid #C9C9C9;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 15px 10px;
+	outline: none;
+	color: black;
+	margin-top: 10px;
+}
+
+button {
+	font-family: inherit;
+	background: #A4A4A4;
+	border: none;
+	border-radius: 20px;
+	padding: 12px 20px;
+	cursor: pointer;
+	transition: 0.3s;
+	text-transform: uppercase;
+	color: #ffffffc9;
+	margin-top: 0px;
+}
+
+button:hover {
+	background: #a4a4a4b0;
+	transition: 0.3s;
+}
+
+.cancel {
+	padding: 12px 25px;
+	margin-right: 10px;
+	background: rgba(255, 255, 255, 0);
+	color: #A4A4A4;
+	border: 1px solid #A4A4A4;;
+}
+
+.cancel:hover {
+	background: rgba(255, 255, 255, 0.253);
+}
+
+#successMessage {
+	background-color: rgba(255, 255, 255, 0.825);
+	width: 60%;
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 0;
+	margin: 50px auto;
+	border-radius: 27px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#successMessage div {
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+
+#successMessage .h1 {
+	font-size: 35px;
+}
+
+#successMessage p {
+	font-size: 20px;
+}
+
+#successMessage button {
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+#successMessage .back {
+	font-size: 15px;
+	color: black;
+	transition: 0.3s;
+}
+
+#successMessage .back:hover {
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.699);
+	transition: 0.3s;
+}
+
+
+@media (max-width: 1600px){
+	#customForm {
+		top: 80%;
+	  }
+}
+
+@media (max-width: 768px){
+	#customForm {
+		width: 80%;
+		font-size: 18px;
+		border-radius: 17px;
+		padding: 20px;
+	}
+	#customForm #line {
+		width: 80%;
+		margin-bottom: 15px;
+		margin-top: 40px;
+	}
+	#customForm .form {
+		padding-bottom: 35px;
+		width: 80%;
+	}
+	button {
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
+	input {
+		margin-top: 10px;
+	}
+	input[type=text], textarea {
+		font-size: 13px;
+		margin-top: 10px;
+	}
+	textarea {
+		height: 130px;
+	}
+	input[type=text]:focus, textarea:focus {
+		font-size: 13px;
+	}
+	#successMessage {
+		width: 90%;
+		border-radius: 17px;
+	}
+	.option {
+		margin-left: 5px;
+	}
+	#successMessage button {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}

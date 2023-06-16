@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Lakki Reddy" rel="stylesheet"/>
+    <title>Summer Data School 2023</title>
+    <link rel="stylesheet" href="assets/css/form.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form id="customForm">
+
+        <p class="h1">POTVRDENIE ÚČASTI</p>
+        <p class="h2">PROSÍME, AK STE VIACERÍ VYPLŇTE ZA KAŽDÉHO ČLENA ZVLÁŠŤ.</p>
+        <div id="line"></div>
+        <div class="form">
+            <label for="name">*Meno a priezvisko:</label><br>
+            <input type="text" id="name" name="name" required placeholder="Zadajte vaše meno a priezvisko">
+        </div>
+
+        <div class="form">
+            <label for="confirm">*Na svadobnú hostinu:</label><br>
+            <input type="radio" id="confirmYes" name="confirm" value="Prídem" required>
+            <label class="option" for="confirmYes">Prídem</label><br>
+            <input type="radio" id="confirmLate" name="confirm" value="Prídem po 21:00" required>
+            <label class="option" for="confirmLate">Prídem po 21:00</label><br>
+            <input type="radio" id="confirmNo" name="confirm" value="Neprídem" required>
+            <label class="option" for="confirmNo">Neprídem</label>
+        </div>
+
+        <div class="form">
+            <label for="size">Ak ste pozvaný aj na večeru, vyberte si porciu:</label><br>
+            <input type="radio" id="sizeBig" name="size" value="Dospelú">
+            <label class="option" for="sizeBig">Dospelú</label><br>
+            <input type="radio" id="sizeSmall" name="size" value="Detskú">
+            <label class="option" for="sizeSmall">Detskú</label><br>
+            <input type="radio" id="sizeSteal" name="size" value="Som bábätko, ukradnem si z maminej porcie">
+            <label class="option" for="sizeSteal">Som bábätko, ukradnem si z maminej porcie</label>
+        </div>
+
+        <div class="form">
+            <label for="request">Požiadavky na jedlo (diety) a iné:</label><br>
+            <textarea type="" id="request" name="request" placeholder="SEM MÔŽETE NAPÍSAŤ VAŠE POŽIADAVKY"></textarea>
+        </div>
+
+        <a href="." onclick="history.back()"><button class="cancel">Zrušiť</button></a>
+        <button type="submit">Odoslať</button>
+    </form>
+
+    <div id="successMessage" style="display: none;">
+        <div>
+            <p class="h1">ďakujeme!</p>
+            <p>formulár bol úspešne odoslaný</p>
+            <a id="fillAgain" href="./form.html"><button class="cancel">Odoslať ďaľší</button></a><br>
+            <a class="back" href=".">späť na úvodnú stránku →</a>
+        </div>
+    </div>
+    <p id="failureMessage" style="display: none;">Chyba</p>
+
+
+
+    <script src="assets/js/form.js"></script>
+</body>
+</html>
