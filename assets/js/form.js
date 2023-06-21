@@ -1,41 +1,65 @@
-// Function to load the Google Form
-function loadGoogleForm() {
-  var googleFormUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSdQohZt9WaFPt3H62jvnpFHlk6em1u-q9DANPSdVJyMQvOVXg/viewform"; // Replace with your Google Form URL
+// Add an event listener to the occupation select element
+document.getElementById("occupation").addEventListener("change", function () {
+  var occupation = this.value;
+  var scholarshipSection = document.getElementById("scholarshipSection");
+  var schoolarshipYes = document.getElementById("schoolarshipYes");
+  var schoolarshipNo = document.getElementById("schoolarshipNo");
+  var motivationSection = document.getElementById("motivationSection");
+  var motivation = document.getElementById("motivation");
 
-  $("#googleFormContainer").html(
-    '<iframe src="' +
-      googleFormUrl +
-      '" width="0" height="0" style="display:none"></iframe>'
-  );
-}
+  // Show or hide the scholarship section based on the selected occupation
+  if (occupation === "Student (Undergrad, Postgrad, PhD)") {
+    scholarshipSection.style.display = "block";
+    schoolarshipYes.setAttribute("required", "true");
+    schoolarshipNo.setAttribute("required", "true");
+    motivationSection.style.display = "block";
+    motivation.setAttribute("required", "true");
+  } else {
+    scholarshipSection.style.display = "none";
+    schoolarshipYes.removeAttribute("required");
+    schoolarshipNo.removeAttribute("required");
+    motivationSection.style.display = "none";
+    motivation.removeAttribute("required");
+  }
+});
 
 // Intercept form submission event
 $("#customForm").submit(function (event) {
   event.preventDefault(); // Prevent the default form submission
 
-  var name = $("#name").val();
-  var confirm =
-    $("#confirmYes:checked").val() ||
-    $("#confirmLate:checked").val() ||
-    $("#confirmNo:checked").val();
-  var size =
-    $("#sizeBig:checked").val() ||
-    $("#sizeSmall:checked").val() ||
-    $("#sizeSteal:checked").val();
-  var request = $("#request").val();
+  var firstName = $("#firstName").val();
+  var familyName = $("#familyName").val();
+  var age = $("#age").val();
+  var email = $("#email").val();
+  var mobileNumber = $("#mobileNumber").val();
+  var occupation = $("#occupation").val();
+  var schoolarship =
+    $("#schoolarshipYes:checked").val() || $("#schoolarshipNo:checked").val();
+  var motivation = $("#motivation").val();
+  var workplace = $("#workplace").val();
+  var workfield = $("#workfield").val();
+  var python = $("#python").val();
+  var statistics = $("#statistics").val();
 
   // Submit values to the Google Form
   var googleFormUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSdQohZt9WaFPt3H62jvnpFHlk6em1u-q9DANPSdVJyMQvOVXg/formResponse"; // Replace with your Google Form URL
+    "https://docs.google.com/forms/d/e/1FAIpQLSdeQqgnhcJEpHYjr2FVW3oqbJ-gW3mdzpefWvJIW2hCQYA6Ag/formResponse"; // Replace with your Google Form URL
 
   $.ajax({
     url: googleFormUrl,
     data: {
-      "entry.893839721": name,
-      "entry.1114165787": confirm,
-      "entry.735642970": size,
-      "entry.37880607": request,
+      "entry.1524361955": firstName,
+      "entry.132605492": familyName,
+      "entry.1866305512": age,
+      "entry.1183500704": email,
+      "entry.1971163925": mobileNumber,
+      "entry.1078397583": occupation,
+      "entry.178189585": schoolarship,
+      "entry.616132433": motivation,
+      "entry.121025546": workplace,
+      "entry.648620836": workfield,
+      "entry.239397382": python,
+      "entry.705131298": statistics,
     },
     type: "POST",
     dataType: "xml",
@@ -51,9 +75,4 @@ $("#customForm").submit(function (event) {
       },
     },
   });
-});
-
-// Execute the function when the page loads
-$(document).ready(function () {
-  loadGoogleForm();
 });

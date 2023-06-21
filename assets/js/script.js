@@ -58,13 +58,9 @@
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
-    if (offset == 130) {offset -= 30}
-
     let elementPos = select(el).offsetTop
     window.scrollTo({
-      top: elementPos - offset,
+      top: elementPos - 80,
       behavior: 'smooth'
     })
   }
@@ -236,3 +232,16 @@ var y = dateObj.getUTCFullYear();
 
 //footer year change
 document.getElementById("footerYear").innerText = y;
+
+function scrollToAbout () {
+  document.getElementById('about').scrollIntoView();
+}
+
+function scrollTotargetAudience () {
+  const id = 'targetAudience';
+  const yOffset = -80; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  window.scrollTo({top: y, behavior: 'smooth'});
+}

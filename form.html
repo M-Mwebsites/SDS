@@ -14,41 +14,97 @@
 
     <form id="customForm">
 
-        <p class="h1">POTVRDENIE ÚČASTI</p>
-        <p class="h2">PROSÍME, AK STE VIACERÍ VYPLŇTE ZA KAŽDÉHO ČLENA ZVLÁŠŤ.</p>
-        <div id="line"></div>
-        <div class="form">
-            <label for="name">*Meno a priezvisko:</label><br>
-            <input type="text" id="name" name="name" required placeholder="Zadajte vaše meno a priezvisko">
+        <div>
+            <label for="firstName">*First name</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="">
         </div>
 
-        <div class="form">
-            <label for="confirm">*Na svadobnú hostinu:</label><br>
-            <input type="radio" id="confirmYes" name="confirm" value="Prídem" required>
-            <label class="option" for="confirmYes">Prídem</label><br>
-            <input type="radio" id="confirmLate" name="confirm" value="Prídem po 21:00" required>
-            <label class="option" for="confirmLate">Prídem po 21:00</label><br>
-            <input type="radio" id="confirmNo" name="confirm" value="Neprídem" required>
-            <label class="option" for="confirmNo">Neprídem</label>
+        <div>
+            <label for="familyName">*Family name</label>
+            <input type="text" id="familyName" name="familyName" required placeholder="">
         </div>
 
-        <div class="form">
-            <label for="size">Ak ste pozvaný aj na večeru, vyberte si porciu:</label><br>
-            <input type="radio" id="sizeBig" name="size" value="Dospelú">
-            <label class="option" for="sizeBig">Dospelú</label><br>
-            <input type="radio" id="sizeSmall" name="size" value="Detskú">
-            <label class="option" for="sizeSmall">Detskú</label><br>
-            <input type="radio" id="sizeSteal" name="size" value="Som bábätko, ukradnem si z maminej porcie">
-            <label class="option" for="sizeSteal">Som bábätko, ukradnem si z maminej porcie</label>
+        <div>
+            <label for="age">*Age</label>
+            <input type="number" id="age" name="age" required placeholder="">
         </div>
 
-        <div class="form">
-            <label for="request">Požiadavky na jedlo (diety) a iné:</label><br>
-            <textarea type="" id="request" name="request" placeholder="SEM MÔŽETE NAPÍSAŤ VAŠE POŽIADAVKY"></textarea>
+        <div>
+            <label for="email">*Email</label>
+            <input type="email" id="email" name="email" required placeholder="">
+        </div>
+
+        <div>
+            <label for="mobileNumber">*Mobile number</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" required placeholder="">
+        </div>
+
+        <div>
+            <label for="occupation">*Occupation</label>
+            <select id="occupation" name="occupation" required>
+              <option value="" selected disabled hidden>Select an Option</option>
+              <option value="Student (Undergrad, Postgrad, PhD)">Student (Undergrad, Postgrad, PhD)</option>
+              <option value="Researcher - Post PhD">Researcher - Post PhD</option>
+              <option value="Public sector">Public sector</option>
+              <option value="Private sector">Private sector</option>
+            </select>
+        </div>
+
+        <div id="scholarshipSection" style="display: none;">
+            <label for="schoolarship">*Would you like to apply for a scholarship? The scholarship covers 100% of the SDS costs! (Scholarship is offered exclusively to students)</label><br>
+            <input type="radio" id="schoolarshipYes" name="schoolarship" value="Yes">
+            <label class="option" for="schoolarshipYes">Yes</label><br>
+            <input type="radio" id="schoolarshipNo" name="schoolarship" value="No">
+            <label class="option" for="schoolarshipNo">No</label><br>
+        </div>
+
+        <div id="motivationSection" style="display: none;">
+            <label for="motivation">*Describe your motivation for attending the Summer Data School (250-500 words)</label><br>
+            <textarea type="" id="motivation" name="motivation" placeholder=""></textarea>
+        </div>
+
+        <div>
+            <label for="workplace">*Employer/University (provide full name)</label>
+            <input type="text" id="workplace" name="workplace" required placeholder="">
+        </div>
+
+        <div>
+            <label for="workfield">*Describe your work/research in 2-3 sentences</label><br>
+            <textarea type="" id="workfield" name="workfield" required placeholder=""></textarea>
+        </div>
+
+        <div>
+            <label for="python">*Experience with Python programming</label>
+            <select id="python" name="python" required>
+              <option value="" selected disabled hidden>Select an Option</option>
+              <option value="I haven't written any code in recent years">"I haven't written any code in recent years"</option>
+              <option value='wrote Print("Hello World!");'>wrote Print("Hello World!");</option>
+              <option value="beginner">beginner</option>
+              <option value="intermediate">intermediate</option>
+              <option value="advanced">advanced</option>
+              <option value="I am master of snakes">"I am master of snakes"</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="statistics">*Experience with Statistics</label>
+            <select id="statistics" name="statistics" required>
+              <option value="" selected disabled hidden>Select an Option</option>
+              <option value="no experience">no experience</option>
+              <option value="I know what p-value is">"I know what p-value is"</option>
+              <option value="intermediate">intermediate</option>
+              <option value="advanced">advanced</option>
+              <option value="expert">expert</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I agree to the processing of personal data</label>
         </div>
 
         <a href="." onclick="history.back()"><button class="cancel">Zrušiť</button></a>
-        <button type="submit">Odoslať</button>
+        <button type="submit">Apply</button>
     </form>
 
     <div id="successMessage" style="display: none;">
@@ -60,8 +116,6 @@
         </div>
     </div>
     <p id="failureMessage" style="display: none;">Chyba</p>
-
-
 
     <script src="assets/js/form.js"></script>
 </body>
