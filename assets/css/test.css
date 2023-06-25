@@ -69,7 +69,7 @@ ul ul li {
 }
 
 #header .container {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 @media (max-width: 991px) {
@@ -216,7 +216,6 @@ ul ul li {
 --------------------------------------------------------------*/
 #about .text {
     margin-top: 250px;
-    padding-bottom: 100px;
 }
 
 #about h1 {
@@ -558,11 +557,13 @@ ul ul li {
 /*--------------------------------------------------------------
   # Join
 --------------------------------------------------------------*/
-
+#join .bg-container-content {
+    overflow: hidden;
+}
 
 #join h1 {
     font-family: 'DM Sans';
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 28px;
     padding-bottom: 27px;
@@ -570,7 +571,7 @@ ul ul li {
 
 #join p {
     font-family: 'DM Sans';
-    color: black;
+    color: white;
 }
 
 #join .small {
@@ -581,14 +582,22 @@ ul ul li {
 
 #join h2 {
     font-family: 'DM Sans';
-    color: #f8c542;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 20px;
+    color: white;
+}
+
+#join .item1 h2 {
+    color: #f8c542;
+}
+
+#join .item2 h2 {
+    color: #FFE896;
 }
 
 #join .row p {
     font-size: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 #join ul {
@@ -597,14 +606,27 @@ ul ul li {
 }
 
 #join ul li {
-    color: black;
+    color: white;
     font-family: 'DM Sans';
     font-size: 15px;
     margin-bottom: 0;
 }
 
+#join .circle {
+    border: 1px solid #f8c542;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 100%;
+    position: absolute;
+    top: 100px;
+    right: -20vh;
+}
+
 @media (max-width: 991px) {
     .join-container {
         padding-top: 80px;
+    }
+    #join .circle {
+        display: none;
     }
 }
