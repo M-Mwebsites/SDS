@@ -35,6 +35,12 @@
     }
 }
 
+@media (max-width: 767px) {
+    .home-bg {
+        top: -90px;
+    }
+}
+
 section {
     background: black;
     font-family: 'DM Sans';
@@ -307,6 +313,26 @@ ul ul li {
     }
 }
 
+@media (max-width: 767px) {
+    #about h1 {
+        font-size: 30px;
+    }
+    #about h1 span {
+        text-decoration-thickness: 5px;
+    }
+    #about p {
+        font-size: 15px;
+    }
+    #about button {
+        font-size: 13px;
+        padding: 10px 12px;
+        gap: 20px;
+    }
+    #about .bg-container-content {
+        background: rgba(0,0,0,0.4)
+    }
+    
+}
 
 /*--------------------------------------------------------------
   # target Audience
@@ -395,6 +421,17 @@ ul ul li {
 }
 
 @media (max-width: 767px) {
+    #audience .audience-container h1 {
+        font-size: 20px;
+    }
+    #audience .audience-container h2 {
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    #audience .audience-container p {
+        font-size: 10px;
+    }
     #audience .audience-container {
         padding-bottom: 80px;
     }
@@ -554,6 +591,13 @@ ul ul li {
     }
 }
 
+@media (max-width: 767px) {
+    #days h1 {
+        font-size: 30px;
+        text-decoration-thickness: 5px;
+    }
+}
+
 /*--------------------------------------------------------------
   # More
 --------------------------------------------------------------*/
@@ -616,6 +660,13 @@ ul ul li {
 
     #more ul {
         padding-left: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    #more h1 {
+        font-size: 30px;
+        text-decoration-thickness: 5px;
     }
 }
 
@@ -753,6 +804,13 @@ ul ul li {
 @media (max-width: 991px) {
     .team-container {
         padding-top: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    #team h1 {
+        font-size: 30px;
+        text-decoration-thickness: 5px;
     }
 }
 
