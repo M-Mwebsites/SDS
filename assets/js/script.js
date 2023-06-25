@@ -50,6 +50,10 @@
         navbarlink.classList.remove('active')
       }
     })
+    if (isScrolledToBottom()) {
+      navbarlinks[3].classList.remove('active')
+      navbarlinks[4].classList.add('active')
+    }
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
@@ -177,6 +181,27 @@
 
 })()
 
+function isScrolledToBottom() {
+  // Height of the entire document
+  const docHeight = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.body.clientHeight,
+    document.documentElement.clientHeight
+  );
+
+  // Current scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Visible height of the window
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  // Check if the sum of scroll position and visible height equals the document height
+  return scrollTop + windowHeight >= docHeight;
+}
+
 function Show () { 
   var vis = (document.getElementById("yes").checked) ? "block" : "none";
   document.getElementById("options").style.display = vis;
@@ -219,24 +244,6 @@ function scrollToAbout() {
   document.getElementById('about').scrollIntoView();
 }
 
-function scrollToAudience() {
-  const id = 'audience';
-  const yOffset = -80; 
-  const element = document.getElementById(id);
-  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
-  window.scrollTo({top: y, behavior: 'smooth'});
-}
-
-function scrollToInfo() {
-  const id = 'info';
-  const yOffset = -80; 
-  const element = document.getElementById(id);
-  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
-  window.scrollTo({top: y, behavior: 'smooth'});
-}
-
 function scrollToDays() {
   const id = 'days';
   const yOffset = -80; 
@@ -246,8 +253,26 @@ function scrollToDays() {
   window.scrollTo({top: y, behavior: 'smooth'});
 }
 
-function scrollToMore() {
-  const id = 'more';
+function scrollToJoin() {
+  const id = 'join';
+  const yOffset = -80; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function scrollToTeam() {
+  const id = 'team';
+  const yOffset = -80; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function scrollToFooter() {
+  const id = 'footer';
   const yOffset = -80; 
   const element = document.getElementById(id);
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
