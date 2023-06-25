@@ -14,17 +14,34 @@
     background: black;
 }
 
+.white {
+    background: white;
+}
+
 .container {
     padding-right: var(--bs-gutter-x, 2rem);
     padding-left: var(--bs-gutter-x, 2rem);
-    margin-top: 0px;
+    padding-bottom: 80px;
+    margin-top: 80px
+}
+
+@media (max-width: 991px) {
+    #about .text {
+        margin-top: 0px;
+    }
+    .container {
+        margin-top: 0px;
+    }
 }
 
 section {
     background: black;
-    font-family: 'DMSans';
-    padding-top: 100px;
+    font-family: 'DM Sans';
 }
+
+ul ul li {
+    list-style-type: disc;
+  }
 
 /*--------------------------------------------------------------
 # Header
@@ -197,12 +214,15 @@ section {
 /*--------------------------------------------------------------
   # About
 --------------------------------------------------------------*/
+#about .text {
+    margin-top: 250px;
+    padding-bottom: 100px;
+}
 
 #about h1 {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 150px;
     color: white;
     line-height: 52px;
 }
@@ -225,10 +245,23 @@ section {
 #about button {
     background: #f8c542;
     border-radius: 35px;
-    color: white;
+    color: black;
     font-size: 14px;
-    padding: 12px 35px;
+    padding: 12px 16px;
     transition: 0.3s;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#about button span {
+    border-radius: 50%;
+    background: white;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    font-weight: 700;
 }
 
 #about button:hover {
@@ -236,19 +269,10 @@ section {
     transition: 0.3s;
 }
 
-
-@media (max-width: 767px) {
-    .home-bg.bg-3 {
-        margin-top: -150px;
+@media (max-width: 991px) {
+    #about .text {
+        margin-top: 100px;
     }
-    #about .container {
-        padding-top: 0px;
-        margin-top: -100px;
-    }    
-    #about h1 {
-        margin-top: 0px;
-    }
-    
 }
 
 
@@ -256,11 +280,12 @@ section {
   # target Audience
 --------------------------------------------------------------*/
 
-.targetAudience-container {
+.audience-container {
     height: inherit;
+    padding-bottom: 0px;
 }
 
-.targetAudience-container h1 {
+.audience-container h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -273,28 +298,28 @@ section {
     padding-bottom: 35px;
 }
 
-.targetAudience-container .items {
+.audience-container .items {
     font-family: 'DM Sans';
     display: flex;
     gap: 50px;
     max-width: 51vw;
 }
 
-.targetAudience-container .item1 {
+.audience-container .item1 {
     width: 17vw;
 }
 
-.targetAudience-container .item2 {
+.audience-container .item2 {
     width: 17vw;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
-.targetAudience-container .item3 {
+.audience-container .item3 {
     width: 17vw;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
-.targetAudience-container h2 {
+.audience-container h2 {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -310,7 +335,7 @@ section {
     margin-bottom: 20px;
 }
 
-.targetAudience-container p {
+.audience-container p {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -321,13 +346,31 @@ section {
     color: #FFFFFF;
 }
 
+@media (max-width: 991px) {
+    .audience-container {
+        padding-top: 0px;
+    }
+    .audience-container .items {
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .audience-container {
+        padding-bottom: 80px;
+    }
+    .audience-container .items {
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .audience-container .item1, .audience-container .item2, .audience-container .item3 {
+        width: 80%;
+    }
+}
+
 /*--------------------------------------------------------------
   # Info
 --------------------------------------------------------------*/
-
-.info {
-    padding-top: 0px;
-}
 
 .info .items {
     width: 40vw;
@@ -361,4 +404,207 @@ section {
 
 .info .items li {
     margin-bottom: 0px;
+}
+
+@media (max-width: 991px) {
+    .info-container {
+        padding-top: 20px;
+    }
+    .info .items {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .info .items {
+        width: 99%;
+    }
+}
+
+/*--------------------------------------------------------------
+  # Days
+--------------------------------------------------------------*/
+
+#days h1 {
+    font-family: 'DM Sans';
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    line-height: 52px;
+    text-decoration: underline;
+    text-decoration-color: #f8c542; /* Change the underline color */
+    text-decoration-thickness: 9px; /* Set the underline height */
+}
+
+#days .daysClick {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 37px;
+    font-family: 'DM Sans';
+}
+
+#days a {
+    color: #FFF;
+    font-size: 18px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+}
+
+#days a:hover, #days a.active {
+    border-bottom: 1px solid #FDC80A;
+    transition: 0.3s;
+}
+
+#days .daysText {
+    color: white;
+    font-size: 15px;
+    font-family: 'DM Sans';
+}
+
+#days .daysText ul li {
+    font-family: 'DM Sans';
+    margin-bottom: 0;
+}
+
+#days .daysText div {
+    display: none;
+}
+
+#days .daysText .show {
+    display: block;
+    transition: 0.3s;
+}
+
+#days ul ul {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .days-container {
+        padding-top: 80px;
+    }
+    #days .daysClick {
+        margin-top: 60px;
+    }
+}
+
+/*--------------------------------------------------------------
+  # More
+--------------------------------------------------------------*/
+
+#more h1 {
+    font-family: 'DM Sans';
+    text-align: center;
+    font-size: 40px;
+    transform: rotate(180deg) translateY(100%);
+    transform-origin: bottom center;
+    color: white;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    text-decoration: underline;
+    text-decoration-color: #f8c542; /* Change the underline color */
+    text-decoration-thickness: 9px; /* Set the underline height */
+}
+
+#more .col-lg {
+    padding-left: 73px;
+    color: white;
+    font-size: 15px;
+}
+
+#more ul li {
+    margin-bottom: 0;
+    font-family: 'DM Sans';
+}
+
+#more p {
+    line-height: 1.4;
+}
+
+#more .title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#more .yellow {
+    color: #f8c542;
+}
+
+@media (max-width: 991px) {
+    #more .row {
+        margin-top: 0px;
+    }
+    #more h1 {
+        transform: none;
+        writing-mode: unset;
+        text-align: left;
+    }
+    #more .col-lg {
+        padding-top: 60px;
+        padding-left: 16px;
+    }
+    #more ul {
+        padding-left: 16px;
+    }
+}
+
+/*--------------------------------------------------------------
+  # Join
+--------------------------------------------------------------*/
+
+
+#join h1 {
+    font-family: 'DM Sans';
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 27px;
+}
+
+#join p {
+    font-family: 'DM Sans';
+    color: black;
+}
+
+#join .small {
+    font-size: 11px;
+    line-height: 1.4;
+    padding-bottom: 50px;
+}
+
+#join h2 {
+    font-family: 'DM Sans';
+    color: #f8c542;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#join .row p {
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+#join ul {
+    padding-left: 20px;
+    list-style-type: "✔  ";
+}
+
+#join ul li {
+    color: black;
+    font-family: 'DM Sans';
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .join-container {
+        padding-top: 80px;
+    }
 }

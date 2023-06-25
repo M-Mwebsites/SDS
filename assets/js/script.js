@@ -41,8 +41,8 @@
   const navbarlinksActive = () => {
     let position = window.scrollY + 350
     navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
+      let sectionId = navbarlink.getAttribute('onclick').match(/scrollTo([A-Za-z]+)/)[1].toLowerCase()
+      let section = select(`#${sectionId}`)
       if (!section) return
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
@@ -115,24 +115,6 @@
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
     }
   }, true)
 
@@ -233,15 +215,85 @@ var y = dateObj.getUTCFullYear();
 //footer year change
 document.getElementById("footerYear").innerText = y;
 
-function scrollToAbout () {
+function scrollToAbout() {
   document.getElementById('about').scrollIntoView();
 }
 
-function scrollTotargetAudience () {
-  const id = 'targetAudience';
+function scrollToAudience() {
+  const id = 'audience';
   const yOffset = -80; 
   const element = document.getElementById(id);
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
   
   window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function scrollToInfo() {
+  const id = 'info';
+  const yOffset = -80; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function scrollToDays() {
+  const id = 'days';
+  const yOffset = -80; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function scrollToMore() {
+  const id = 'more';
+  const yOffset = -80; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function day(dayClick) {
+  if (dayClick == "day1Click") {
+    document.getElementById("day1Click").classList.add("active");
+    document.getElementById("day1").classList.add("show");
+  }
+  else {
+    document.getElementById("day1Click").classList.remove("active");
+    document.getElementById("day1").classList.remove("show");
+  }
+  if (dayClick == "day2Click") {
+    document.getElementById("day2Click").classList.add("active");
+    document.getElementById("day2").classList.add("show");
+  }
+  else {
+    document.getElementById("day2Click").classList.remove("active");
+    document.getElementById("day2").classList.remove("show");
+  }
+  if (dayClick == "day3Click") {
+    document.getElementById("day3Click").classList.add("active");
+    document.getElementById("day3").classList.add("show");
+  }
+  else {
+    document.getElementById("day3Click").classList.remove("active");
+    document.getElementById("day3").classList.remove("show");
+  }
+  if (dayClick == "day4Click") {
+    document.getElementById("day4Click").classList.add("active");
+    document.getElementById("day4").classList.add("show");
+  }
+  else {
+    document.getElementById("day4Click").classList.remove("active");
+    document.getElementById("day4").classList.remove("show");
+  }
+  if (dayClick == "day5Click") {
+    document.getElementById("day5Click").classList.add("active");
+    document.getElementById("day5").classList.add("show");
+  }
+  else {
+    document.getElementById("day5Click").classList.remove("active");
+    document.getElementById("day5").classList.remove("show");
+  }
 }

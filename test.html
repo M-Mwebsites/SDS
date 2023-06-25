@@ -31,13 +31,11 @@
         <nav id="navbar" class="navbar">
           <div>
             <ul data-aos="fade-down">
-              <li><a class="nav-link scrollto active" onclick="scrollToAbout()"><!-- <p>01</p> -->About</a></li>
-              <li><a class="nav-link scrollto" onclick="scrollTotargetAudience()"><!-- <p>02</p> -->Audience</a></li>
-              <li><a class="nav-link scrollto" href="#processes"><!-- <p>03</p> -->Processes</a></li>
-              <li><a class="nav-link scrollto" href="#areas"><!-- <p>04</p> -->Areas</a></li>
-              <li><a class="nav-link scrollto " href="#team"><!-- <p>05</p> -->Team</a></li>
-              <li><a class="nav-link scrollto " href="#events"><!-- <p>05</p> -->Events</a></li>
-              <li><a class="nav-link scrollto" href="#contact"><!-- <p>06</p> -->Contact</a></li>
+              <li><a class="nav-link scrollto" id="aboutLink" onclick="scrollToAbout()">About</a></li>
+              <li><a class="nav-link scrollto" id="audienceLink" onclick="scrollToAudience()">Audience</a></li>
+              <li><a class="nav-link scrollto" id="infoLink" onclick="scrollToInfo()">Information</a></li>
+              <li><a class="nav-link scrollto" id="daysLink" onclick="scrollToDays()">Program</a></li>
+              <li><a class="nav-link scrollto" id="moreLink" onclick="scrollToMore()">More</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle" data-aos="fade-down"></i>
           </div>
@@ -51,8 +49,21 @@
         <div class="container">
           <div class="text">
             <h1>A career-boosting<br><span>data science bootcamp</span></h1>
-            <p>Bratislava — 23-27 January 2023</p>
-            <a href="form.html"><button>Apply now →</button></a>
+            <p>Bratislava — 21-25 August 2023</p>
+            <a href="form.html"><button>Apply now
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="Arrow right alt" clip-path="url(#clip0_115_4)">
+                    <path id="Vector" d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="black"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_115_4">
+                      <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </button></a>
           </div>
         </div>
       </div>
@@ -72,7 +83,6 @@
             <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg2"/>
           </div>
           <div class="bg3-bar-group w-clearfix">
-            <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg1"/>
             <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg2"/>
             <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg5"/>
             <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg2"/>
@@ -84,10 +94,10 @@
       </div>
     </section>
 
-    <section id="targetAudience" class="targetAudience">
+    <section id="audience" class="audience">
       <div data-w-id="56128be3-9980-1071-8d52-7a1f19a9a937">
         <div class="bg-container-content">
-          <div class="container targetAudience-container">
+          <div class="container audience-container">
             <h1 data-aos="fade-up">TARGET AUDIENCE</h1>
             <div class="items">
               <div class="item1" data-aos="fade-up">
@@ -121,7 +131,6 @@
               <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg2"/>
             </div>
             <div class="bg3-bar-group w-clearfix">
-              <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg1"/>
               <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg2"/>
               <img src="assets/img/yellow_plot.png" width="115" class="bg-bar bar-marg3"/>
               <img src="assets/img/black_plot.jpg" width="115" class="bg-bar bar-marg2"/>
@@ -180,10 +189,163 @@
       </div>
     </section>
 
-    <section id="processes">
+    <section id="days" class="days">
       <div class="bg-container-content black">
-        <div class="container processes">
-          <p>TODO</p>
+        <div class="container days-container">
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-5">
+              <h1>DETAILED PROGRAM</h1>
+            </div>
+            <div class="col-lg-7">
+              <div class="daysClick">
+                <a onclick="day('day1Click')" class="active" id="day1Click">1. DAY</a>
+                <a onclick="day('day2Click')" id="day2Click">2. DAY</a>
+                <a onclick="day('day3Click')" id="day3Click">3. DAY</a>
+                <a onclick="day('day4Click')" id="day4Click">4. DAY</a>
+                <a onclick="day('day5Click')" id="day5Click">5. DAY</a>
+              </div>
+              <div class="daysText">
+                <div id="day1" class="show">
+                  <ul>
+                    <li>Welcome and opening</li>
+                    <li>Presentation: Data Science</li>
+                    <li>Intro to Python programming</li>
+                    <li>Strings handling</li>
+                    <li>Data importing, cleaning, filtering in Pandas library</li>
+                    <li>Data storage</li>
+                    <li>Missing values and data aggregation</li>
+                  </ul>
+                </div>
+                <div id="day2">
+                  <ul>
+                    <li>Data visualisation</li>
+                    <li>Interactive graphs</li>
+                    <li>Dashboards</li>
+                    <li>Geographical plotting</li>
+                    <li>Presentation: Data communication </li>
+                    <li>Multivariate plots</li>
+                  </ul>
+                </div>
+                <div id="day3">
+                  <ul>
+                    <li>Intro to Statistical Inference and Hypothesis testing</li>
+                    <li>Presentation: Causality vs Correlation</li>
+                    <li>Regression Modelling</li>
+                    <li>Presentation: Predictive performance measures</li>
+                    <li>Logistic Regression</li>
+                    <li>Presentation: Statistics vs Machine Learning </li>
+                    <li>Exercise: Exploratory data analysis</li>
+                  </ul>
+                </div>
+                <div id="day4">
+                  <ul>
+                    <li>Intro to Machine Learning</li>
+                    <li>Supervised Learning (Prediction)</li>
+                    <li>Model inspection, feature importance, partial dependence </li>
+                    <li>Unsupervised Learning (Clustering)</li>
+                    <li>Dimensionality Reduction, Anomaly detection</li>
+                    <li>Presentation: Interpretability vs complexity </li>
+                    <li>Looking for the best predictive performance</li>
+                  </ul>
+                </div>
+                <div id="day5">
+                  <ul>
+                    <li>Stream 1 - Healthcare analytics and epidemiology</li>
+                    <ul>
+                      <li>Case exercise 1: Standardised incidence and prevalence of diseases</li>
+                      <li>Case exercise 2: Analysing survival rates of patients after surgeries</li>
+                      <li>Case exercise 3: Regional differences in drug prescriptions</li>
+                    </ul>
+                    <li>Stream 2 - Biomedical data analysis and bioinformatics</li>
+                    <ul>
+                      <li>Case exercise 1: Visualisation and clustering of high dimensional single cell RNA seq data</li>
+                      <li>Case exercise 2: Cancer research pipeline: from gene expression to protein-protein interactions to therapeutics</li>
+                      <li>Case exercise 3: Cross-talk of the microbiome and cancer: Exploring the unknown with the power of data</li>
+                    </ul>
+                    <li>Stream 3 - Econometrics and social analytics</li>
+                    <ul>
+                      <li>Case exercise 1: Exploring social cohesion - Fresh World Value Survey data</li>
+                      <li>Case exercise 2: Churn analysis - predicting which clients are going to leave</li>
+                      <li>Case exercise 3: Political survey analysis</li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="more" class="more">
+      <div class="bg-container-content black">
+        <div class="container days-container">
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-1" data-aos="fade-right">
+              <h1>MORE INFORMATION</h1>
+            </div>
+            <div class="col-lg">
+              <ul>
+                <li>Start - 21 Aug 2023</li>
+                <li>End - 25 Aug 2023</li>
+                <li>A course day starts at 9:00 and ends at 18:00 with breaks for coffee and lunch.</li>
+                <li>No programming experience is required to attend (however, we highly encourage checking out the recommended topics to familiarise yourself with before the bootcamp).</li>
+                <li>We will emphasize data visualization and writing simple clean code during the course.</li>
+                <li>Participants will encounter plenty of data cleaning problems along the exercises.</li>
+                <li>Forums for knowledge and experience exchange are an essential aspect of the bootcamp.</li>
+              </ul>
+            </div>
+            <div class="col-lg">
+              <p class="title">Required knowledge</p>
+              <p class="yellow">
+                Basic quantitative skills<br>
+                No programming skills needed
+              </p>
+              Familiarity with computer programming or database structures is a benefit, but not a requirement. Summer Data School is set up in a way that beginners will learn the basics and do some hands-on experimentation with guidance, while participants with some experience will be able to see best practices, utilise their knowledge and do some additional magic on really cool datasets while consulting with experienced mentors!
+            </div>
+            <div class="col-lg">
+              <p class="title">PYTHON</p>
+              Widely considered as one of the best programming languages for beginners, Python is a general purpose language that is currently the best choice for data science and machine learning applications. During the first day, we will walk you through the basics of this language and how to use it to solve data science tasks.
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="join">
+      <div class="bg-container-content white">
+        <div class="container join-container">
+          <h1>JOIN OUR NEW CROSS-DISCIPLINARY<br>DATA SCIENCE COMMUNITY</h1>
+          <p class="small">
+            By attending Summer Data School, you will gain lifelong access to our data science community. We support our members online, and in person by organizing monthly events such as discussions, short lectures and workshops, and data challenge evenings. The participants of our previous event, Winter Data School, found work opportunities and research collaborations in this community. As community is one of our core values, we listen closely to your feedback and try to accommodate what the members want in our events. Join this wonderful community and gain access to a unique resource for learning data science!
+          </p>
+          <div class="row">
+            <div class="col-md-3">
+              <h2>PRIVATE SECTOR</h2>
+              <p>Price - 1000 EUR</p>
+            </div>
+            <div class="col-md-3">
+              <h2>PUBLIC SECTOR</h2>
+              <p>Price - 900 EUR</p>
+            </div>
+            <div class="col-md-3">
+              <h2>ACADEMIA</h2>
+              <p>Price - 800 EUR</p>
+            </div>
+          </div>
+          <p class="small col-md-9">
+            Thanks to our partners, we are able to provide 20 scholarships to students (undergraguate, masters and PhD). This scholarship covers 100% of the costs of Summer Data School. If you are a student and wish to apply for the scholarship, please fill out the sign-up form accordingly and write a short (500 words maximum) motivation statement - the scholarship will be awarded based on this statement.
+          </p>
+          <ul>
+            <li>5 days of lectures and workshops by industry leaders</li>
+            <li>Exercises and mentoring</li>
+            <li>Carefully prepared curriculum</li>
+            <li>Presentations from external speakers</li>
+            <li>Networking opportunities</li>
+            <li>Knowledge exchange</li>
+            <li>Membership in the new data science community with monthly events</li>
+          </ul>
         </div>
       </div>
     </section>
