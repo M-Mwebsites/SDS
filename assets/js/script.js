@@ -123,6 +123,20 @@
   }, true)
 
   /**
+ * Scrool with ofset on links with a class name .scrollto
+ */
+  on('click', '.scrollto', function(e) {
+      let navbar = select('#navbar')
+      if (navbar.classList.contains('navbar-mobile')) {
+        mobileMenu();
+        navbar.classList.remove('navbar-mobile')
+        let navbarToggle = select('.mobile-nav-toggle')
+        navbarToggle.classList.toggle('bi-list')
+        navbarToggle.classList.toggle('bi-x')
+      }
+  }, true)
+
+  /**
    * Scroll with ofset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
@@ -321,4 +335,27 @@ function day(dayClick) {
     document.getElementById("day5Click").classList.remove("active");
     document.getElementById("day5").classList.remove("show");
   }
+}
+
+
+function mobileMenu() {
+  var backToTop = document.getElementById("backToTop");
+  
+  // if (document.body.classList.contains("stop-scrolling")) {
+  //   document.body.classList.remove("stop-scrolling");
+  //   backToTop.style.opacity = 1;
+  // }
+  // else {
+  //   document.body.classList.add("stop-scrolling");
+  //   backToTop.style.opacity = 0;
+  //   backToTop.style.removeProperty(opacity);
+  // }
+
+  if (!document.getElementById("navbar").classList.contains("navbar-mobile")) {
+    document.body.classList.add("stop-scrolling");
+  }
+  else {
+    document.body.classList.remove("stop-scrolling");
+  }
+
 }

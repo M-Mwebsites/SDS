@@ -30,9 +30,15 @@
     #about .text {
         margin-top: 0px;
     }
-
     .container {
         margin-top: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
@@ -77,6 +83,12 @@ ul ul li {
 @media (max-width: 991px) {
     #header .container {
         padding-top: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    #header .container {
+        padding-bottom: 80px;
     }
 }
 
@@ -305,6 +317,21 @@ ul ul li {
     #about .text {
         margin-top: 100px;
         padding-bottom: 50px;
+    }
+    #about .bg-container-content {
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (max-width: 767px) {
+    #about h1 {
+        font-size: 35px;
+    }
+    #about h1 span {
+        text-decoration-thickness: 6px;
+    }
+    #about p {
+        font-size: 18px;
     }
 }
 
@@ -555,6 +582,16 @@ ul ul li {
     }
 }
 
+@media (max-width: 767px) {
+    #days h1 {
+        font-size: 35px;
+        text-decoration-thickness: 6px;
+    }
+    #days a {
+        padding: 5px 0px;
+    }
+}
+
 /*--------------------------------------------------------------
   # More
 --------------------------------------------------------------*/
@@ -591,6 +628,7 @@ ul ul li {
 }
 
 #more .title {
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -620,6 +658,13 @@ ul ul li {
     }
 }
 
+@media (max-width: 767px) {
+    #more h1 {
+        font-size: 35px;
+        text-decoration-thickness: 6px;
+    }
+}
+
 /*--------------------------------------------------------------
   # Join
 --------------------------------------------------------------*/
@@ -627,7 +672,7 @@ ul ul li {
     overflow: hidden;
 }
 
-#join .conatiner {
+#join .container {
     overflow: initial;
 }
 
@@ -702,6 +747,16 @@ ul ul li {
     }
 }
 
+@media (max-width: 767px) {
+    #join .small {
+        padding-bottom: 30px;
+    }
+    #join .row p {
+        padding-bottom: 20px;
+    }
+}
+
+
 /*--------------------------------------------------------------
   # Team
 --------------------------------------------------------------*/
@@ -744,7 +799,6 @@ ul ul li {
     font-size: 15px;
     font-family: 'DM Sans';
     line-height: 1.5;
-    font-weight: bold;
 }
 
 #team a {
@@ -758,6 +812,16 @@ ul ul li {
 @media (max-width: 991px) {
     .team-container {
         padding-top: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    #team .col-lg {
+        padding-right: 10px;
+    }
+    #team h1 {
+        font-size: 35px;
+        text-decoration-thickness: 6px;
     }
 }
 
@@ -810,7 +874,7 @@ ul ul li {
 }
 
 #footer .copyright {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     color: #646464;
 }
