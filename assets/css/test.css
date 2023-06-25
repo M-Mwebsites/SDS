@@ -22,7 +22,8 @@
     padding-right: var(--bs-gutter-x, 2rem);
     padding-left: var(--bs-gutter-x, 2rem);
     padding-bottom: 80px;
-    margin-top: 80px
+    margin-top: 80px;
+    overflow: hidden;
 }
 
 @media (max-width: 991px) {
@@ -32,12 +33,6 @@
 
     .container {
         margin-top: 0px;
-    }
-}
-
-@media (max-width: 767px) {
-    .home-bg {
-        top: -90px;
     }
 }
 
@@ -313,26 +308,6 @@ ul ul li {
     }
 }
 
-@media (max-width: 767px) {
-    #about h1 {
-        font-size: 30px;
-    }
-    #about h1 span {
-        text-decoration-thickness: 5px;
-    }
-    #about p {
-        font-size: 15px;
-    }
-    #about button {
-        font-size: 13px;
-        padding: 10px 12px;
-        gap: 20px;
-    }
-    #about .bg-container-content {
-        background: rgba(0,0,0,0.4)
-    }
-    
-}
 
 /*--------------------------------------------------------------
   # target Audience
@@ -356,17 +331,17 @@ ul ul li {
     padding-bottom: 35px;
 }
 
-#audience p {
-    border: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
 #audience .audience-container .items {
     font-family: 'DM Sans';
     display: flex;
     gap: 50px;
     max-width: 51vw;
+}
+
+#audience .audience-container .items div p {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #audience .audience-container .item1 {
@@ -421,17 +396,6 @@ ul ul li {
 }
 
 @media (max-width: 767px) {
-    #audience .audience-container h1 {
-        font-size: 20px;
-    }
-    #audience .audience-container h2 {
-        font-size: 15px;
-        width: 30px;
-        height: 30px;
-    }
-    #audience .audience-container p {
-        font-size: 10px;
-    }
     #audience .audience-container {
         padding-bottom: 80px;
     }
@@ -591,13 +555,6 @@ ul ul li {
     }
 }
 
-@media (max-width: 767px) {
-    #days h1 {
-        font-size: 30px;
-        text-decoration-thickness: 5px;
-    }
-}
-
 /*--------------------------------------------------------------
   # More
 --------------------------------------------------------------*/
@@ -663,18 +620,15 @@ ul ul li {
     }
 }
 
-@media (max-width: 767px) {
-    #more h1 {
-        font-size: 30px;
-        text-decoration-thickness: 5px;
-    }
-}
-
 /*--------------------------------------------------------------
   # Join
 --------------------------------------------------------------*/
 #join .bg-container-content {
     overflow: hidden;
+}
+
+#join .conatiner {
+    overflow: initial;
 }
 
 #join h1 {
@@ -691,7 +645,7 @@ ul ul li {
 }
 
 #join .small {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.4;
     padding-bottom: 50px;
 }
@@ -804,13 +758,6 @@ ul ul li {
 @media (max-width: 991px) {
     .team-container {
         padding-top: 80px;
-    }
-}
-
-@media (max-width: 767px) {
-    #team h1 {
-        font-size: 30px;
-        text-decoration-thickness: 5px;
     }
 }
 
