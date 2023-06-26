@@ -116,6 +116,7 @@ ul ul li {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .navbar a i,
@@ -284,6 +285,10 @@ ul ul li {
     margin: 35px 0 35px -20px;
     border: 1px solid #F4C95B;
     max-width: max-content;
+}
+
+#about a {
+    text-decoration: none;
 }
 
 #about button {

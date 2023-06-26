@@ -147,12 +147,18 @@
         </div>
 
         <div class="data">
+          <p>Mandatory checkboxes</p>
+          <div>
             <input type="checkbox" id="agree" name="agree" required>
-            <label for="agree">I agree to the processing of personal data</label>
+            <label for="agree">By checking this box, I agree to pay the entry fee to Summer Data School in full</label><br>
+            <input type="checkbox" id="confirm" name="confirm" required>
+            <label for="confirm">I confirm that all information I provided in the form is correct</label>
+          </div>
         </div>
 
         <div class="but">
-            <button type="submit">Apply</button>
+          <button class="cancel" onclick="history.back()">Back</button>
+          <button type="submit">Send</button>
         </div>
 
         </form>
@@ -162,6 +168,7 @@
         <div>
             <p class="h1">Thank you!</p>
             <p>Registration was succesfull</p>
+            <p class="back"><a href=".">Back to main page →</a></p>
         </div>
     </div>
     <p id="failureMessage" style="display: none;">Error</p>

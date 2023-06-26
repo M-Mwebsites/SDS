@@ -341,27 +341,52 @@ body {
 	display: inline;
 }
 
+#customForm .data p {
+	margin-bottom: 0;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#customForm .data div label {
+    text-transform: none;
+    padding-left: 5px;
+}
+
+
 #customForm .but {
 	width: 100%;
 	text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 100px;
 }
 
 #customForm .but button {
-	margin: 0 auto;
     background: #F4C95B;
     border-radius: 35px;
     color: black;
-    font-size: 20px;
-    padding: 16px 25px;
+    font-size: 14px;
+    padding: 10px 30px;
     transition: 0.3s;
     font-weight: bold;
-	text-transform: uppercase;
-	margin-top: 20px;
+    align-items: center;
 }
 
 #customForm .but button:hover {
     background: #FFE896;
     transition: 0.3s;
+}
+
+#customForm .but .cancel {
+    background: black;
+    border: 1px solid white;
+    color: white;
+}
+
+#customForm .but .cancel:hover {
+    background: rgb(42, 42, 42);
 }
 
 #successMessage {
@@ -386,6 +411,19 @@ body {
 	font-family: 'DM Sans';
 	color: white;
 	margin-bottom: 0;
+}
+
+#successMessage .back{
+    margin-top: 20px;
+}
+
+#successMessage  a {
+    color: white;
+    text-decoration: none;
+}
+
+#successMessage a:hover {
+    text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
