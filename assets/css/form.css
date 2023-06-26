@@ -482,8 +482,13 @@ body {
     text-decoration: underline;
 }
 
-#footer .col-md div {
-    padding-top: 30px;
+#footer .col-lg-4 {
+    padding-bottom: 15px;
+}
+
+#footer .col1 .row {
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 #footer .col1 p {
@@ -502,7 +507,7 @@ body {
 }
 
 #footer .col2 p {
-    padding-top: 10px;
+    padding-top: 3px;
 }
 
 #footer .copyright {
@@ -530,5 +535,8 @@ body {
         padding-top: 30px;
         display: inline-block;
         align-self: flex-end;
+    }
+    #footer .col1 .row {
+        padding-bottom: 10px;
     }
 }

@@ -855,8 +855,17 @@ ul ul li {
     text-decoration: underline;
 }
 
-#footer .col-md div {
-    padding-top: 30px;
+#footer .col-lg-4 {
+    padding-bottom: 15px;
+}
+
+#footer img {
+    padding-bottom: 10px;
+}
+
+#footer .col1 .row {
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 #footer .col1 p {
@@ -875,7 +884,7 @@ ul ul li {
 }
 
 #footer .col2 p {
-    padding-top: 10px;
+    padding-top: 3px;
 }
 
 #footer .copyright {
@@ -903,5 +912,8 @@ ul ul li {
         padding-top: 30px;
         display: inline-block;
         align-self: flex-end;
+    }
+    #footer .col1 .row {
+        padding-bottom: 10px;
     }
 }
