@@ -73,6 +73,7 @@ ul ul li {
     width: 150px;
     height: auto;
     align-self: center;
+    cursor: pointer;
 }
 
 #header div {
