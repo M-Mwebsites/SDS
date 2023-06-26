@@ -315,7 +315,7 @@ body {
     -moz-appearance: none;
     background-image: url('/assets/img/down-arrow.svg');
     background-repeat: no-repeat;
-    background-size: 14px 14px;
+    background-size: 10px 10px;
     background-position: calc(100% - 16px);
 }
 
@@ -352,7 +352,6 @@ body {
     text-transform: none;
     padding-left: 5px;
 }
-
 
 #customForm .but {
 	width: 100%;

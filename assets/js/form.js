@@ -68,6 +68,7 @@ $("#customForm").submit(function (event) {
         // Show success message and hide the form
         $("#customForm").hide();
         $("#successMessage").show();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       },
       200: function () {
         // Error message
