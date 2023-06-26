@@ -360,11 +360,6 @@ function mobileMenu() {
   //   backToTop.style.removeProperty(opacity);
   // }
 
-  if (!document.getElementById("navbar").classList.contains("navbar-mobile")) {
-    document.body.classList.add("stop-scrolling");
-  }
-  else {
-    document.body.classList.remove("stop-scrolling");
-  }
+
 
 }
