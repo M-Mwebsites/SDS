@@ -786,7 +786,7 @@ ul ul li {
 
 #team img {
     height: 155px;
-    height: auto;
+    width: auto;
     margin-bottom: 30px;
     margin-top: 70px;
 }
