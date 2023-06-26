@@ -359,7 +359,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 24px;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 #customForm .but button {
@@ -423,6 +423,38 @@ body {
 
 #successMessage a:hover {
     text-decoration: underline;
+}
+
+#refunds {
+    padding-bottom: 0;
+}
+
+#refunds h1 {
+    color: white;
+    font-family: 'DM Sans';
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#refunds h2 {
+    padding-top: 20px;
+    color: white;
+    font-family: 'DM Sans';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #F4C95B;
+}
+
+#refunds p {
+    color: white;
+    font-family: 'DM Sans';
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#refunds a {
+    color: white;
 }
 
 /*--------------------------------------------------------------
