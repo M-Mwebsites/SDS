@@ -255,6 +255,10 @@ var y = dateObj.getUTCFullYear();
 document.getElementById("footerYear").innerText = y;
 
 function scrollToAbout() {
+  const element = document.getElementById("about");
+  if (!element) {
+    window.location.href = "index.html#about";
+  }
   document.getElementById('about').scrollIntoView();
 }
 
@@ -262,8 +266,10 @@ function scrollToDays() {
   const id = 'days';
   const yOffset = -80; 
   const element = document.getElementById(id);
+  if (!element) {
+    window.location.href = "index.html#days";
+  }
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
   window.scrollTo({top: y, behavior: 'smooth'});
 }
 
@@ -271,8 +277,10 @@ function scrollToJoin() {
   const id = 'join';
   const yOffset = -80; 
   const element = document.getElementById(id);
+  if (!element) {
+    window.location.href = "index.html#join";
+  }
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
   window.scrollTo({top: y, behavior: 'smooth'});
 }
 
@@ -280,8 +288,10 @@ function scrollToTeam() {
   const id = 'team';
   const yOffset = -80; 
   const element = document.getElementById(id);
+  if (!element) {
+    window.location.href = "index.html#team";
+  }
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
   window.scrollTo({top: y, behavior: 'smooth'});
 }
 
@@ -290,7 +300,6 @@ function scrollToFooter() {
   const yOffset = -80; 
   const element = document.getElementById(id);
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
   window.scrollTo({top: y, behavior: 'smooth'});
 }
 
