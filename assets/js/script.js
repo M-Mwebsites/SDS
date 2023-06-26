@@ -152,7 +152,7 @@
           scrollto(window.location.hash)
         }
       }
-    }, 1000);
+    }, 400);
   });
 
 
