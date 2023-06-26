@@ -486,6 +486,10 @@ body {
     padding-bottom: 15px;
 }
 
+#footer img {
+    padding-bottom: 10px;
+}
+
 #footer .col1 .row {
     padding-top: 20px;
     padding-bottom: 30px;
