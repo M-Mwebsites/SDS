@@ -701,6 +701,12 @@ ul ul li {
     padding-bottom: 50px;
 }
 
+#join .small2 {
+    font-size: 12px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+}
+
 #join h2 {
     font-family: 'DM Sans';
     font-weight: bold;
