@@ -4,23 +4,37 @@ document.getElementById("occupation").addEventListener("change", function () {
   var scholarshipSection = document.getElementById("scholarshipSection");
   var schoolarshipYes = document.getElementById("schoolarshipYes");
   var schoolarshipNo = document.getElementById("schoolarshipNo");
-  var motivationSection = document.getElementById("motivationSection");
-  var motivation = document.getElementById("motivation");
 
   // Show or hide the scholarship section based on the selected occupation
   if (occupation === "Student (Undergrad, Postgrad, PhD)") {
     scholarshipSection.style.display = "block";
     schoolarshipYes.setAttribute("required", "true");
     schoolarshipNo.setAttribute("required", "true");
-    motivationSection.style.display = "block";
-    motivation.setAttribute("required", "true");
+    //motivationSection.style.display = "block";
+    //motivation.setAttribute("required", "true");
   } else {
     scholarshipSection.style.display = "none";
     schoolarshipYes.removeAttribute("required");
     schoolarshipNo.removeAttribute("required");
-    motivationSection.style.display = "none";
-    motivation.removeAttribute("required");
+    //motivationSection.style.display = "none";
+    //motivation.removeAttribute("required");
   }
+});
+
+// Add an event listener to the schoolarship select element
+document.getElementById("schoolarshipYes").addEventListener("change", function () {
+  var motivationSection = document.getElementById("motivationSection");
+  var motivation = document.getElementById("motivation");
+  motivationSection.style.display = "block";
+  motivation.setAttribute("required", "true");
+});
+
+// Add an event listener to the schoolarship select element
+document.getElementById("schoolarshipNo").addEventListener("change", function () {
+  var motivationSection = document.getElementById("motivationSection");
+  var motivation = document.getElementById("motivation");
+  motivationSection.style.display = "none";
+  motivation.removeAttribute("required");
 });
 
 // Intercept form submission event

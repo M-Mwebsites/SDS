@@ -284,13 +284,6 @@ body {
     text-decoration-thickness: 9px;
 }
 
-@media (max-width: 767px) {
-	#customForm h1 {
-		font-size: 35px;
-		text-decoration-thickness: 6px;
-	}
-}
-
 #customForm label {
 	color: white;
 	font-family: 'DM Sans';
@@ -456,6 +449,26 @@ body {
 
 #refunds a {
     color: white;
+}
+
+#motivationSection p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: white;
+    padding-left: 8px;
+}
+
+@media (max-width: 767px) {
+	#customForm h1 {
+		font-size: 35px;
+		text-decoration-thickness: 6px;
+	}
+    #motivationSection p {
+        font-size: 12px;
+        line-height: 1.4;
+        color: white;
+        padding-left: 0px;
+    }
 }
 
 /*--------------------------------------------------------------
