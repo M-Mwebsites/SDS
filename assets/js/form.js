@@ -25,16 +25,24 @@ document.getElementById("occupation").addEventListener("change", function () {
 document.getElementById("schoolarshipYes").addEventListener("change", function () {
   var motivationSection = document.getElementById("motivationSection");
   var motivation = document.getElementById("motivation");
+  var fullPrice = document.getElementById("fullPrice");
+  var agreePrice = document.getElementById("agreePrice");
   motivationSection.style.display = "block";
   motivation.setAttribute("required", "true");
+  fullPrice.style.display = "none";
+  motivation.removeAttribute("required");
 });
 
 // Add an event listener to the schoolarship select element
 document.getElementById("schoolarshipNo").addEventListener("change", function () {
   var motivationSection = document.getElementById("motivationSection");
   var motivation = document.getElementById("motivation");
+  var fullPrice = document.getElementById("fullPrice");
+  var agreePrice = document.getElementById("agreePrice");
   motivationSection.style.display = "none";
   motivation.removeAttribute("required");
+  fullPrice.style.display = "block";
+  agreePrice.setAttribute("required", "true");
 });
 
 // Intercept form submission event
