@@ -359,3 +359,8 @@ function mobileMenu() {
 
 
 }
+
+function hideNotification() {
+  let notifiction = document.getElementById("notify");
+  notifiction.style.display = "none";
+}

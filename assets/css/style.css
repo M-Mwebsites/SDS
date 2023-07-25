@@ -962,3 +962,61 @@ ul ul li {
         padding-bottom: 10px;
     }
 }
+
+
+
+
+.notify {
+    position: fixed;
+    background: white;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+}
+
+.notify-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.notify .text .up {
+    font-family: 'DM Sans';
+    margin-bottom: 0;
+    line-height: 20px;
+    padding-bottom: 10px;
+    color: #F4C95B;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.notify .text .down {
+    font-family: 'DM Sans';
+    margin-bottom: 0;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 15px;
+} 
+
+.notify button {
+    margin-left: 15px;
+    background: #F4C95B;
+    border-radius: 35px;
+    color: black;
+    font-size: 14px;
+    padding: 8px 30px;
+    transition: 0.3s;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    height: 35px;
+    align-self: center;
+}
+
+.notify button:hover {
+    background: #FFE896;
+    transition: 0.3s;
+}
