@@ -15,7 +15,7 @@
 }
 
 .black {
-    background: black;
+    background: #03162b;
 }
 
 .white {
@@ -47,7 +47,7 @@
 }
 
 section {
-    background: black;
+    background: #03162b;
     font-family: 'DM Sans';
 }
 
@@ -62,7 +62,7 @@ ul ul li {
     height: 100px;
     transition: all 0.5s;
     z-index: 997;
-    background-color: black;
+    background-color: #03162b;
 }
 
 #header.header-scrolled {
@@ -70,7 +70,7 @@ ul ul li {
 }
 
 #header #logo {
-    width: 150px;
+    width: 180px;
     height: auto;
     align-self: center;
     cursor: pointer;
@@ -135,7 +135,7 @@ ul ul li {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-    color: #F4C95B;
+    color: #4ec8ca;
 }
 
 @media (max-width: 1366px) {
@@ -179,13 +179,13 @@ ul ul li {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(60, 56, 56, 0.9);
+    background: rgba(96, 96, 96, 0.9);
     transition: 0.3s;
     text-align: center !important;
 }
 
 .navbar-mobile div {
-    background: black;
+    background: #03162b;
     height: 90%;
     width: 90%;
     margin: 0 auto;
@@ -204,7 +204,7 @@ ul ul li {
     right: 15px;
     left: 15px;
     padding: 25px 0px 10px;
-    background-color: black;
+    background-color: #03162b;
     overflow-y: auto;
     transition: 0.3s;
     font-size: 15px;
@@ -233,7 +233,7 @@ ul ul li {
 
 .navbar button {
     margin-left: 15px;
-    background: #F4C95B;
+    background: #4ec8ca;
     border-radius: 35px;
     color: black;
     font-size: 14px;
@@ -255,7 +255,7 @@ ul ul li {
 }
 
 .navbar button:hover {
-    background: #FFE896;
+    background: #6de2e4;
     transition: 0.3s;
 }
 
@@ -264,7 +264,7 @@ ul ul li {
   # Form
   --------------------------------------------------------------*/
 body {
-	background: black;
+	background: #03162b;
 }
 
 #customForm {
@@ -280,7 +280,7 @@ body {
     color: white;
     line-height: 52px;
 	text-decoration: underline;
-    text-decoration-color: #F4C95B;
+    text-decoration-color: #4ec8ca;
     text-decoration-thickness: 9px;
 }
 
@@ -293,7 +293,7 @@ body {
 
 #customForm input[type=text], #customForm input[type=number], #customForm input[type=email], #customForm select, #customForm textarea {
 	width: 100%;
-	background: black;
+	background: #03162b;
 	border: 1px solid #898989;
 	border-radius: 5px;
 	padding: 12px 20px;
@@ -357,7 +357,7 @@ body {
 }
 
 #customForm .but button {
-    background: #F4C95B;
+    background: #4ec8ca;
     border-radius: 35px;
     color: black;
     font-size: 14px;
@@ -368,18 +368,18 @@ body {
 }
 
 #customForm .but button:hover {
-    background: #FFE896;
+    background: #6de2e4;
     transition: 0.3s;
 }
 
 #customForm .but .cancel {
-    background: black;
+    background: #03162b;
     border: 1px solid white;
     color: white;
 }
 
 #customForm .but .cancel:hover {
-    background: rgb(42, 42, 42);
+    background: #052142;
 }
 
 #successMessage {
@@ -390,7 +390,7 @@ body {
 #successMessage div {
 	text-align: center;
 	padding: 30px 60px;
-	border: 1px solid #F4C95B;
+	border: 1px solid #4ec8ca;
 	width: fit-content;
 	margin: 0 auto;
 }
@@ -437,7 +437,7 @@ body {
     font-family: 'DM Sans';
     font-size: 20px;
     text-transform: uppercase;
-    color: #F4C95B;
+    color: #4ec8ca;
 }
 
 #refunds p {
@@ -531,16 +531,16 @@ body {
 #footer .copyright {
     font-size: 13px;
     font-weight: bold;
-    color: #646464;
+    color: #adaeb4;
 }
 
 #footer .copyright span {
-    color: #F4C95B;
+    color: #4ec8ca;
     text-transform: uppercase;
 }
 
 #footer #footerYear {
-    color: #646464;
+    color: #adaeb4;
 }
 
 @media (max-width: 991px) {
