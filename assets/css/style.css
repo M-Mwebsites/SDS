@@ -1040,7 +1040,7 @@ ul ul li {
 #choice {
     background-color: #03162b;
     padding-top: 150px;
-    padding-bottom: 100px;
+    height: 100vh;
     padding-right: var(--bs-gutter-x, 2rem);
     padding-left: var(--bs-gutter-x, 2rem);
 }
@@ -1137,6 +1137,9 @@ ul ul li {
 }
 
 @media (max-width: 991px) {
+    #choice {
+        height: 110vh;
+    }
     #choice .flex {
         flex-direction: column;
         max-width: 380px;

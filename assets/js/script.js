@@ -50,7 +50,8 @@
         navbarlink.classList.remove('active')
       }
     })
-    if (isScrolledToBottom()) {
+    let element = document.getElementById("footer");
+    if (isScrolledToBottom() && element != null) {
       navbarlinks[3].classList.remove('active')
       navbarlinks[4].classList.add('active')
     }
@@ -293,8 +294,12 @@ function scrollToTeam() {
 
 function scrollToFooter() {
   const id = 'footer';
-  const yOffset = -80; 
+  const yOffset = -80;
   const element = document.getElementById(id);
+  if (element == null) {
+    window.location.href = "index.html#footer";
+    return;
+  }
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
   window.scrollTo({top: y, behavior: 'smooth'});
 }
