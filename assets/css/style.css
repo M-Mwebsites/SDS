@@ -868,19 +868,28 @@ ul ul li {
     font-size: 20px;
 }
 
+#partners .main .main-flex {
+    display: flex;
+}
+
 #partners .main img {
-    width: 57px;
     height: auto;
     margin-left: 20px;
     margin-top: 17px;
     margin-bottom: 27px;
+    padding-right: 10px;
 }
 
 #partners .other img {
-    width: 65px;
     height: auto;
-    margin-left: 17px;
-    margin-top: 17px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    #partners .main .main-flex {
+        flex-direction: column;
+    }
 }
 
 /*--------------------------------------------------------------
