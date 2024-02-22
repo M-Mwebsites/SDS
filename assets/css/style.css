@@ -870,6 +870,7 @@ ul ul li {
 
 #partners .main .main-flex {
     display: flex;
+    align-items: center;
 }
 
 #partners .main img {
@@ -889,12 +890,17 @@ ul ul li {
 @media (max-width: 767px) {
     #partners .main .main-flex {
         flex-direction: column;
+        align-items:normal;
     }
 }
 
 /*--------------------------------------------------------------
 # footer Section
 --------------------------------------------------------------*/
+
+.footer-container {
+    margin-top: 60px;
+}
 
 #footer h1 {
     font-family: 'DM Sans';
@@ -966,7 +972,7 @@ ul ul li {
 
 @media (max-width: 991px) {
     .footer-container {
-        padding-top: 80px;
+        margin-top: 40px;
     }
     #footer .col2 {
         line-height: 1;
